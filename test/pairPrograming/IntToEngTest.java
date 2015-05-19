@@ -5,7 +5,6 @@ import static org.hamcrest.CoreMatchers.*;
 import org.junit.Test;
 
 public class IntToEngTest {
-
 	@Test
 	public void test1() {
 		IntToEng ite = new IntToEng();

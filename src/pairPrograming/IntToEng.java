@@ -8,11 +8,11 @@ public class IntToEng {
         System.out.println(translateEng(input));
     }	
 
-    // 数値を英訳する変換するメソッド
+    // int範囲外に突入するため、プログラム改良をする
     static String translateEng(int n) {
-    	if (n/1000000000 > 0) {
+     if (n/1000000000 > 0) {//1000000000~999999999999
     		return tenth(n);
-    	}else if (n/1000000 > 0) {
+    	}else if (n/1000000 > 0) {//1000000~999999999
     		return seventh(n);
     	}else if(n/1000 > 0){//1000~9999
     		return forth(n);
@@ -74,5 +74,4 @@ public class IntToEng {
 			return third(n/1000000000)+" billion "+seventh(n%1000000000);
 		}
     }
-    
 }
